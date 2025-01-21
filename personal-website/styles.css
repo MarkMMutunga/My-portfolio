@@ -1,0 +1,112 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header, footer, main {
+        padding: 10px;
+        text-align: center;
+    }
+    
+    #projects ul {
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    #projects li {
+        margin: 10px 0;
+    }
+}
+
+/* Animation styles */
+h1, h2 {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover, h2:hover {
+    transform: scale(1.05);
+    color: #007BFF; /* Change color on hover */
+}
+
+/* Fade-in effect for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Header Styles */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    textalign: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+}
+#chatbot {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+#messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+#userInput {
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+#sendBtn {
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
